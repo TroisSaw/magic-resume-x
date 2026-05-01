@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { getFileHandle, verifyPermission } from "@/utils/fileSystem";
+import { getFileHandle, verifyPermission, isFileSystemAccessSupported } from "@/utils/fileSystem";
 import {
   BasicInfo,
   Education,
@@ -141,11 +141,16 @@ const normalizeImportedResume = (
   };
 };
 
-// 同步简历到文件系统
+// 同步简历到文件系统（仅 Chrome/Edge 支持）
 const syncResumeToFile = async (
   resumeData: ResumeData,
   prevResume?: ResumeData
 ) => {
+  // Firefox 不支持 File System Access API，直接跳过
+  if (!isFileSystemAccessSupported()) {
+    return;
+  }
+
   try {
     const handle = await getFileHandle("syncDirectory");
     if (!handle) {
@@ -320,6 +325,7 @@ export const useResumeStore = create(
         });
 
         (async () => {
+          if (!isFileSystemAccessSupported()) return;
           try {
             const handle = await getFileHandle("syncDirectory");
             if (!handle) return;
