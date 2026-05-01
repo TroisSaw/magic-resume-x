@@ -6,6 +6,7 @@ import { PlusCircle } from "lucide-react";
 import CustomItem from "./CustomItem";
 import { useResumeStore } from "@/store/useResumeStore";
 import { CustomItem as CustomItemType } from "@/types/resume";
+import SnippetImportButton from "../SnippetImportButton";
 
 const CustomPanel = memo(({ sectionId }: { sectionId: string }) => {
   const { addCustomItem, updateCustomData, activeResume } = useResumeStore();
@@ -34,10 +35,13 @@ const CustomPanel = memo(({ sectionId }: { sectionId: string }) => {
           <CustomItem key={item.id} item={item} sectionId={sectionId} />
         ))}
 
-        <Button onClick={handleCreateItem} className={cn("w-full")}>
-          <PlusCircle className="w-4 h-4 mr-2" />
-          添加
-        </Button>
+        <div className="flex gap-2">
+          <Button onClick={handleCreateItem} className="flex-1">
+            <PlusCircle className="w-4 h-4 mr-2" />
+            添加
+          </Button>
+          <SnippetImportButton targetType="custom" />
+        </div>
       </Reorder.Group>
     </div>
   );

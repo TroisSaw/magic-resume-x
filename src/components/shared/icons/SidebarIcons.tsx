@@ -83,3 +83,18 @@ export const IconAI: React.FC<IconProps> = ({ size = 24, className, active }) =>
     <rect x="5" y="28" width="8" height="8" rx="2" fill="#FA8C16" transform="rotate(25 9 32)" />
   </svg>
 );
+
+// Snippet Library: Blocks/Puzzle (Flat Vibrant Teal)
+export const IconSnippets: React.FC<IconProps> = ({ size = 24, className, active }) => (
+  <svg width={size} height={size} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    {/* Top Block */}
+    <rect x="4" y="4" width="32" height="10" rx="3" fill={active ? "#13C2C2" : "#36CFC9"} />
+    {/* Bottom Left Block */}
+    <rect x="4" y="18" width="14" height="18" rx="3" fill={active ? "#08979C" : "#5CDBD3"} />
+    {/* Bottom Right Block */}
+    <rect x="22" y="18" width="14" height="18" rx="3" fill={active ? "#006D75" : "#87E8DE"} />
+    {/* Connector dots */}
+    <circle cx="20" cy="14" r="2" fill="white" fillOpacity="0.6" />
+    <circle cx="20" cy="27" r="2" fill="white" fillOpacity="0.6" />
+  </svg>
+);

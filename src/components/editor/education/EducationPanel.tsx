@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import EducationItem from "./EducationItem";
 import { Education } from "@/types/resume";
 import { generateUUID } from "@/utils/uuid";
+import SnippetImportButton from "../SnippetImportButton";
 
 const EducationPanel = () => {
   const t = useTranslations('workbench.educationPanel');
@@ -49,10 +50,13 @@ const EducationPanel = () => {
           ></EducationItem>
         ))}
 
-        <Button onClick={handleCreateProject} className="w-full">
-          <PlusCircle className="w-4 h-4 mr-2" />
-          {t('addButton')}
-        </Button>
+        <div className="flex gap-2">
+          <Button onClick={handleCreateProject} className="flex-1">
+            <PlusCircle className="w-4 h-4 mr-2" />
+            {t('addButton')}
+          </Button>
+          <SnippetImportButton targetType="education" />
+        </div>
       </Reorder.Group>
     </div>
   );

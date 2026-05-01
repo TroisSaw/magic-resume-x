@@ -1,6 +1,7 @@
 import { useResumeStore } from "@/store/useResumeStore";
 import { cn } from "@/lib/utils";
 import Field from "../Field";
+import SnippetImportButton from "../SnippetImportButton";
 
 const SkillPanel = () => {
   const { activeResume, updateSkillContent } = useResumeStore();
@@ -17,6 +18,9 @@ const SkillPanel = () => {
         "border-border"
       )}
     >
+      <div className="flex justify-end mb-2">
+        <SnippetImportButton targetType="skill" />
+      </div>
       <Field
         value={skillContent}
         onChange={handleChange}

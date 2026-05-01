@@ -7,6 +7,7 @@ import ExperienceItem from "./ExperienceItem";
 import { Experience } from "@/types/resume";
 import { useResumeStore } from "@/store/useResumeStore";
 import { generateUUID } from "@/utils/uuid";
+import SnippetImportButton from "../SnippetImportButton";
 
 const ExperiencePanel = () => {
   const t = useTranslations("workbench.experiencePanel");
@@ -44,10 +45,13 @@ const ExperiencePanel = () => {
           <ExperienceItem key={item.id} experience={item}></ExperienceItem>
         ))}
 
-        <Button onClick={handleCreateProject} className="w-full">
-          <PlusCircle className="w-4 h-4 mr-2" />
-          {t("addButton")}
-        </Button>
+        <div className="flex gap-2">
+          <Button onClick={handleCreateProject} className="flex-1">
+            <PlusCircle className="w-4 h-4 mr-2" />
+            {t("addButton")}
+          </Button>
+          <SnippetImportButton targetType="experience" />
+        </div>
       </Reorder.Group>
     </div>
   );

@@ -107,7 +107,8 @@
       "resumes": "Resumes",
       "settings": "Settings",
       "templates": "Templates",
-      "ai": "AI Config"
+      "ai": "AI Config",
+      "snippets": "Snippets"
     },
     "resumes": {
       "created": "Created At",
@@ -211,6 +212,58 @@
           "apiKey": "Gemini API Key",
           "modelId": "Gemini Model ID"
         }
+      }
+    },
+    "snippets": {
+      "title": "Snippet Library",
+      "subtitle": "Manage your experience, project, and skill snippets with multiple versions",
+      "searchPlaceholder": "Search snippets...",
+      "addSnippet": "New Snippet",
+      "addTag": "New Tag",
+      "tagName": "Tag Name",
+      "allTypes": "All Types",
+      "allTags": "All Tags",
+      "noSnippets": "No snippets yet",
+      "noSnippetsDesc": "Click the button above to create your first snippet",
+      "type": {
+        "experience": "Experience",
+        "project": "Project",
+        "education": "Education",
+        "skill": "Skills",
+        "selfEvaluation": "Self Evaluation",
+        "custom": "Custom"
+      },
+      "defaultVariant": "Default",
+      "variants": "Versions",
+      "addVariant": "Add Version",
+      "variantName": "Version Name",
+      "variantDesc": "Version Description",
+      "edit": "Edit",
+      "save": "Save",
+      "form": {
+        "title": "Title",
+        "titlePlaceholder": "e.g. ByteDance Internship",
+        "type": "Type",
+        "tags": "Tags",
+        "content": "Content"
+      },
+      "dialog": {
+        "createTitle": "New Snippet",
+        "editTitle": "Edit Snippet",
+        "deleteTitle": "Delete Snippet",
+        "deleteConfirm": "Are you sure you want to delete this snippet? This action cannot be undone."
+      },
+      "assemble": {
+        "title": "Assemble Resume",
+        "subtitle": "Select snippets from your library to quickly build a targeted resume",
+        "selectTemplate": "Select Template",
+        "selectSnippets": "Select Snippets",
+        "selectedCount": "{count} selected",
+        "preview": "Preview",
+        "create": "Generate Resume",
+        "step1": "Select Template",
+        "step2": "Pick Snippets",
+        "step3": "Confirm"
       }
     },
     "templates": {

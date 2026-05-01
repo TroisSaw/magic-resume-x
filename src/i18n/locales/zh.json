@@ -108,7 +108,8 @@
       "resumes": "我的简历",
       "settings": "通用设置",
       "templates": "简历模板",
-      "ai": "AI服务商"
+      "ai": "AI服务商",
+      "snippets": "语料库"
     },
     "resumes": {
       "created": "创建于",
@@ -251,6 +252,58 @@
       "editorial": {
         "name": "画报风模板",
         "description": "大号精美衬线体与窄体无衬线的完美结合，极具奢华感"
+      }
+    },
+    "snippets": {
+      "title": "语料库",
+      "subtitle": "管理你的经历、项目、技能素材，支持多版本文案",
+      "searchPlaceholder": "搜索语料...",
+      "addSnippet": "新建语料",
+      "addTag": "新建标签",
+      "tagName": "标签名称",
+      "allTypes": "全部类型",
+      "allTags": "全部标签",
+      "noSnippets": "暂无语料",
+      "noSnippetsDesc": "点击上方按钮创建你的第一条语料",
+      "type": {
+        "experience": "工作经历",
+        "project": "项目经历",
+        "education": "教育背景",
+        "skill": "专业技能",
+        "selfEvaluation": "自我评价",
+        "custom": "自定义"
+      },
+      "defaultVariant": "默认版本",
+      "variants": "版本",
+      "addVariant": "添加版本",
+      "variantName": "版本名称",
+      "variantDesc": "版本描述",
+      "edit": "编辑",
+      "save": "保存",
+      "form": {
+        "title": "标题",
+        "titlePlaceholder": "如：字节跳动实习",
+        "type": "类型",
+        "tags": "标签",
+        "content": "内容"
+      },
+      "dialog": {
+        "createTitle": "新建语料",
+        "editTitle": "编辑语料",
+        "deleteTitle": "删除语料",
+        "deleteConfirm": "确定要删除这条语料吗？此操作无法撤销。"
+      },
+      "assemble": {
+        "title": "组装简历",
+        "subtitle": "从语料库中选择素材，快速组合出针对性简历",
+        "selectTemplate": "选择模板",
+        "selectSnippets": "选择语料",
+        "selectedCount": "已选择 {count} 条",
+        "preview": "预览",
+        "create": "生成简历",
+        "step1": "选择模板",
+        "step2": "勾选语料",
+        "step3": "确认生成"
       }
     }
   },

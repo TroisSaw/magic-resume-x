@@ -1,6 +1,7 @@
 import { useResumeStore } from "@/store/useResumeStore";
 import { cn } from "@/lib/utils";
 import Field from "../Field";
+import SnippetImportButton from "../SnippetImportButton";
 
 const SelfEvaluationPanel = () => {
     const { activeResume, updateSelfEvaluationContent } = useResumeStore();
@@ -17,6 +18,9 @@ const SelfEvaluationPanel = () => {
                 "border-border"
             )}
         >
+            <div className="flex justify-end mb-2">
+                <SnippetImportButton targetType="selfEvaluation" />
+            </div>
             <Field
                 value={selfEvaluationContent}
                 onChange={handleChange}
