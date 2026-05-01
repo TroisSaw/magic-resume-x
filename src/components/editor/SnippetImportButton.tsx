@@ -44,8 +44,14 @@ interface SnippetImportButtonProps {
 export default function SnippetImportButton({ targetType, className }: SnippetImportButtonProps) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
-  const { snippets } = useSnippetStore();
-  const { activeResume, updateExperience, updateProjects, updateEducation, updateSkillContent, updateSelfEvaluationContent, addCustomData, updateCustomData } = useResumeStore();
+  const snippets = useSnippetStore((state) => state.snippets);
+  const activeResume = useResumeStore((state) => state.activeResume);
+  const updateExperience = useResumeStore((state) => state.updateExperience);
+  const updateProjects = useResumeStore((state) => state.updateProjects);
+  const updateEducation = useResumeStore((state) => state.updateEducation);
+  const updateSkillContent = useResumeStore((state) => state.updateSkillContent);
+  const updateSelfEvaluationContent = useResumeStore((state) => state.updateSelfEvaluationContent);
+  const updateCustomData = useResumeStore((state) => state.updateCustomData);
 
   const filtered = Object.values(snippets).filter(
     (s) =>

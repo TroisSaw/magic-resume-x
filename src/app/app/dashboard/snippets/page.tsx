@@ -42,7 +42,7 @@ import {
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { generateUUID } from "@/utils/uuid";
-import { DEFAULT_TEMPLATES } from "@/config";
+import { DEFAULT_TEMPLATES } from "@/components/templates/registry";
 import { Experience, Project, Education, CustomItem, MenuSection } from "@/types/resume";
 
 // ==================== 类型图标映射 ====================
